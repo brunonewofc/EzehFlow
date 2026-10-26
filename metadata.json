@@ -1,0 +1,8 @@
+{
+  "name": "EzehFlow — Automatización de Google Flow",
+  "description": "Extensión de panel lateral para automatizar la creación y descarga secuencial de imágenes y vídeos en Google Flow (labs.google y flow.google.com).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
