@@ -80,7 +80,7 @@ export const InstallModal: React.FC<InstallModalProps> = ({ isOpen, onClose }) =
         {/* Action Button - Direct Native Download of the provided ZIP */}
         <div className="space-y-3">
           <a
-            href="/assets/aistudio/ezehflow-1.0.0_2ea86636.zip"
+            href="/assets/aistudio/ezehflow-1.0.0_9cee0462.zip"
             download="ezehflow-1.0.0.zip"
             onClick={handleDownloadClick}
             className="w-full py-3.5 px-4 rounded-xl font-bold text-sm text-white bg-red-600 hover:bg-red-500 active:scale-95 transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2 cursor-pointer"
