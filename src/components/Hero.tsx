@@ -47,13 +47,15 @@ export const Hero: React.FC<HeroProps> = ({ onInstallClick, onScrollToSimulator 
                 </svg>
               </button>
 
-              <button
-                onClick={onInstallClick}
+              <a
+                href="https://drive.google.com/file/d/1w-sM6ZEZqDZ5iMzE9gtjBqF2nNz37uwn/view"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold text-zinc-200 hover:text-white bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 rounded-xl transition-all flex items-center justify-center gap-2"
               >
                 <span>Descargar Extensión</span>
-                <span className="text-zinc-400 text-xs">v1.0.0</span>
-              </button>
+                <span className="text-zinc-400 text-xs">Drive</span>
+              </a>
             </div>
 
             {/* Clean unboxed metadata indicators with dot separators (Zero-Pill discipline) */}

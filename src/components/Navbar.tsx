@@ -34,8 +34,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onInstallClick }) => {
 
         {/* Zone 3: 1 primary action */}
         <div className="flex items-center gap-3 shrink-0">
-          <button
-            onClick={onInstallClick}
+          <a
+            href="https://drive.google.com/file/d/1w-sM6ZEZqDZ5iMzE9gtjBqF2nNz37uwn/view"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-red-600 hover:bg-red-500 active:scale-95 rounded-lg transition-all shadow-lg shadow-red-600/25 whitespace-nowrap shrink-0"
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -46,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onInstallClick }) => {
               <line x1="10.88" y1="21.94" x2="15.46" y2="14" />
             </svg>
             <span>Descargar Extensión</span>
-          </button>
+          </a>
         </div>
       </div>
     </header>

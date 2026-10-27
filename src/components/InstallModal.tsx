@@ -80,15 +80,15 @@ export const InstallModal: React.FC<InstallModalProps> = ({ isOpen, onClose }) =
         {/* Action Button - Direct Native Download of the provided ZIP */}
         <div className="space-y-3">
           <a
-            href="/assets/aistudio/ezehflow-1.0.0_9cee0462.zip"
-            download="ezehflow-1.0.0.zip"
-            onClick={handleDownloadClick}
+            href="https://drive.google.com/file/d/1w-sM6ZEZqDZ5iMzE9gtjBqF2nNz37uwn/view"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full py-3.5 px-4 rounded-xl font-bold text-sm text-white bg-red-600 hover:bg-red-500 active:scale-95 transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2 cursor-pointer"
           >
-            <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2.2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            <span>Descargar desde Google Drive</span>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
-            <span>{downloadTriggered ? '✓ Descargando ezehflow-1.0.0.zip...' : 'Descargar Extensión (.ZIP)'}</span>
           </a>
 
           <button
