@@ -10,35 +10,9 @@ export const InstallModal: React.FC<InstallModalProps> = ({ isOpen, onClose }) =
 
   if (!isOpen) return null;
 
-  const handleDownloadZip = () => {
-    // Generate simulated zip/json bundle for EzehFlow extension
-    const manifestContent = {
-      name: 'EzehFlow — Automatización de Google Flow',
-      version: '1.4.0',
-      manifest_version: 3,
-      description:
-        'Automatiza la creación y descarga secuencial de imágenes y videos dentro de Google Flow (labs.google y flow.google.com).',
-      side_panel: {
-        default_path: 'sidepanel.html',
-      },
-      permissions: ['sidePanel', 'downloads', 'storage', 'activeTab'],
-      host_permissions: ['https://labs.google/*', 'https://flow.google.com/*'],
-    };
-
-    const blob = new Blob([JSON.stringify(manifestContent, null, 2)], {
-      type: 'application/json',
-    });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'ezehflow-extension-manifest.json';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-
+  const handleDownloadClick = () => {
     setDownloadTriggered(true);
-    setTimeout(() => setDownloadTriggered(false), 4000);
+    setTimeout(() => setDownloadTriggered(false), 5000);
   };
 
   return (
@@ -59,20 +33,15 @@ export const InstallModal: React.FC<InstallModalProps> = ({ isOpen, onClose }) =
           ✕
         </button>
 
-        <div className="flex items-center gap-3 mb-4">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-red-600 text-white font-black text-sm">
-            EF
-          </div>
-          <div>
-            <h3 id="modal-title" className="text-lg font-bold text-white">
-              Instalación de EzehFlow
-            </h3>
-            <p className="text-xs text-zinc-400">Extensión de panel lateral para Google Chrome</p>
-          </div>
+        <div className="mb-4">
+          <h3 id="modal-title" className="text-lg font-bold text-white">
+            Descargar EzehFlow
+          </h3>
+          <p className="text-xs text-zinc-400">Extensión oficial para Google Chrome · v1.0.0</p>
         </div>
 
         <p className="text-xs sm:text-sm text-zinc-300 mb-6 leading-relaxed">
-          Sigue estos sencillos pasos para activar EzehFlow en tu navegador y automatizar tus sesiones creativas en Google Flow:
+          Haz clic en el botón inferior para descargar el paquete <code className="text-red-400 font-mono">ezehflow-1.0.0.zip</code> e instálalo en tu navegador:
         </p>
 
         {/* Steps */}
@@ -80,9 +49,9 @@ export const InstallModal: React.FC<InstallModalProps> = ({ isOpen, onClose }) =
           <div className="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
             <span className="font-mono text-red-500 font-bold">1.</span>
             <div>
-              <span className="font-semibold text-white block">Descarga el paquete de la extensión</span>
+              <span className="font-semibold text-white block">Descarga y descomprime el archivo ZIP</span>
               <span className="text-zinc-400 text-xs">
-                Obtén el archivo de configuración y scripts listo para cargar.
+                Descarga el archivo <code className="text-zinc-300 font-mono">ezehflow-1.0.0.zip</code> y extrae su contenido en una carpeta local.
               </span>
             </div>
           </div>
@@ -92,7 +61,7 @@ export const InstallModal: React.FC<InstallModalProps> = ({ isOpen, onClose }) =
             <div>
               <span className="font-semibold text-white block">Abre las extensiones de Chrome</span>
               <span className="text-zinc-400 text-xs">
-                Dirígete a <code className="text-red-400 font-mono">chrome://extensions</code> y activa el <strong>Modo de desarrollador</strong> arriba a la derecha.
+                Accede a <code className="text-red-400 font-mono">chrome://extensions</code> y activa la casilla <strong>Modo de desarrollador</strong> arriba a la derecha.
               </span>
             </div>
           </div>
@@ -100,23 +69,27 @@ export const InstallModal: React.FC<InstallModalProps> = ({ isOpen, onClose }) =
           <div className="flex items-start gap-3 p-3 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
             <span className="font-mono text-red-500 font-bold">3.</span>
             <div>
-              <span className="font-semibold text-white block">Carga y fija el panel lateral</span>
+              <span className="font-semibold text-white block">Cargar descomprimida</span>
               <span className="text-zinc-400 text-xs">
-                Haz clic en "Cargar descomprimida" y abre <strong className="text-white">labs.google</strong> o <strong className="text-white">flow.google.com</strong>.
+                Pulsa en <strong>"Cargar descomprimida"</strong>, selecciona la carpeta extraída y abre <strong className="text-white">flow.google.com</strong> o <strong className="text-white">labs.google</strong>.
               </span>
             </div>
           </div>
         </div>
 
-        {/* Action Button */}
+        {/* Action Button - Direct Native Download of the provided ZIP */}
         <div className="space-y-3">
-          <button
-            type="button"
-            onClick={handleDownloadZip}
-            className="w-full py-3 px-4 rounded-xl font-bold text-sm text-white bg-red-600 hover:bg-red-500 active:scale-95 transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2"
+          <a
+            href="/assets/aistudio/ezehflow-1.0.0_2ea86636.zip"
+            download="ezehflow-1.0.0.zip"
+            onClick={handleDownloadClick}
+            className="w-full py-3.5 px-4 rounded-xl font-bold text-sm text-white bg-red-600 hover:bg-red-500 active:scale-95 transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2 cursor-pointer"
           >
-            <span>{downloadTriggered ? '✓ Descarga iniciada' : 'Descargar Archivo de la Extensión'}</span>
-          </button>
+            <svg className="w-4 h-4 fill-none stroke-current" strokeWidth="2.2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            <span>{downloadTriggered ? '✓ Descargando ezehflow-1.0.0.zip...' : 'Descargar Extensión (.ZIP)'}</span>
+          </a>
 
           <button
             type="button"

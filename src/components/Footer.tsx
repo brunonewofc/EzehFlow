@@ -6,10 +6,7 @@ export const Footer: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-6 w-6 items-center justify-center rounded-md bg-red-600 text-white font-black text-xs">
-              EF
-            </div>
+          <div className="flex items-center gap-2">
             <span className="font-bold text-sm text-white tracking-tight">EzehFlow</span>
             <span className="text-zinc-600">·</span>
             <span className="text-zinc-400">Automatización de Google Flow</span>

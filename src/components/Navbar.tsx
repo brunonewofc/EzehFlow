@@ -9,13 +9,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onInstallClick }) => {
     <header className="sticky top-0 z-50 w-full border-b border-zinc-800/80 bg-black/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-8 px-4 sm:px-6 lg:px-8">
         {/* Zone 1: Single text element wordmark */}
-        <a href="#" className="flex items-center gap-2.5 whitespace-nowrap shrink-0 group">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-red-600 text-white font-black text-sm tracking-tighter shadow-sm shadow-red-600/40 group-hover:bg-red-500 transition-colors">
-            EF
-          </div>
-          <span className="text-lg font-bold tracking-tight text-white group-hover:text-red-400 transition-colors">
-            EzehFlow
-          </span>
+        <a href="#" className="text-lg font-bold tracking-tight text-white hover:text-red-400 transition-colors whitespace-nowrap shrink-0">
+          EzehFlow
         </a>
 
         {/* Zone 2: 4–5 clean single-line text navigation links */}
@@ -50,7 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onInstallClick }) => {
               <line x1="3.95" y1="6.06" x2="8.54" y2="14" />
               <line x1="10.88" y1="21.94" x2="15.46" y2="14" />
             </svg>
-            <span>Añadir a Chrome</span>
+            <span>Descargar Extensión</span>
           </button>
         </div>
       </div>
