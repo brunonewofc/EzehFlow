@@ -48,7 +48,7 @@ export const Hero: React.FC<HeroProps> = ({ onInstallClick, onScrollToSimulator 
               </button>
 
               <a
-                href="https://drive.google.com/file/d/1w-sM6ZEZqDZ5iMzE9gtjBqF2nNz37uwn/view"
+                href="https://drive.google.com/file/d/1u93vayGDnVJxkFe1_tB8WSrqDKcSlRe8/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-3.5 text-sm font-semibold text-zinc-200 hover:text-white bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 rounded-xl transition-all flex items-center justify-center gap-2"

@@ -35,7 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onInstallClick }) => {
         {/* Zone 3: 1 primary action */}
         <div className="flex items-center gap-3 shrink-0">
           <a
-            href="https://drive.google.com/file/d/1w-sM6ZEZqDZ5iMzE9gtjBqF2nNz37uwn/view"
+            href="https://drive.google.com/file/d/1u93vayGDnVJxkFe1_tB8WSrqDKcSlRe8/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-red-600 hover:bg-red-500 active:scale-95 rounded-lg transition-all shadow-lg shadow-red-600/25 whitespace-nowrap shrink-0"

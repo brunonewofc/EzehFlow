@@ -80,7 +80,7 @@ export const InstallModal: React.FC<InstallModalProps> = ({ isOpen, onClose }) =
         {/* Action Button - Direct Native Download of the provided ZIP */}
         <div className="space-y-3">
           <a
-            href="https://drive.google.com/file/d/1w-sM6ZEZqDZ5iMzE9gtjBqF2nNz37uwn/view"
+            href="https://drive.google.com/file/d/1u93vayGDnVJxkFe1_tB8WSrqDKcSlRe8/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full py-3.5 px-4 rounded-xl font-bold text-sm text-white bg-red-600 hover:bg-red-500 active:scale-95 transition-all shadow-lg shadow-red-600/30 flex items-center justify-center gap-2 cursor-pointer"
